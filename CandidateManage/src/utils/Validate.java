@@ -10,7 +10,6 @@ package utils;
  */
 import Model.Candidate;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -146,8 +145,8 @@ public class Validate {
 
     //check id exist or not
     public static boolean checkIdExist(List<Candidate> candidateList, String id) {
-        for (Candidate candidate : candidateList ) {
-            if (candidate.getId().equalsIgnoreCase(id)) {
+        for (Candidate candidate : candidateList) {
+            if (candidate.getId().equals(id)) {
                 System.err.println("Id exist.");
                 return false;
             }

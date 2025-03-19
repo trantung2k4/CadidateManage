@@ -130,8 +130,7 @@ public class Candidate {
         this.email = Validate.inputString("Enter Email: ", "[A-Za-z]\\w+@\\w+(\\.\\w+){1,3}$");
     }
 
-    @Override
-    public String toString() {
+    public String output() {
         return this.firstName + this.lastName + "|" + this.birthDate + "|"
                 + this.address + "|" + this.phone + "|" + this.email + "|"
                 + this.typeCandidate;

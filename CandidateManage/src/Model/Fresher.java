@@ -49,10 +49,9 @@ public class Fresher extends Candidate {
         super.input();
 
         // Nhập ngày tốt nghiệp
-        this.graduationDate = Validate.inputDate("Enter Graduation Date (dd-MM-yyyy): ");
+        this.graduationDate = Validate.inputString("Enter Graduation day: ", "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\\d{4})$");
 
         // Nhập xếp loại tốt nghiệp (chỉ chấp nhận Excellence, Good, Fair, Poor)
-        System.out.print("Enter Graduation Rank (Excellence, Good, Fair, Poor): ");
-        this.graduationRank = Validate.checkInputGraduationRank();
+        this.graduationRank = Validate.inputString("Enter Gradution Rank: ", "(?i)^(Excellence|Good|Fair|Poor)$");
     }
 }
