@@ -148,10 +148,10 @@ public class Validate {
         for (Candidate candidate : candidateList) {
             if (candidate.getId().equals(id)) {
                 System.err.println("Id exist.");
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
 

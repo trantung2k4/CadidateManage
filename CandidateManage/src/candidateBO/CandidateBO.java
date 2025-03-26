@@ -36,7 +36,7 @@ public class CandidateBO {
 
         // Gọi phương thức input() để nhập thông tin ứng viên
         candidate.setTypeCandidate(type);
-        candidate.input();
+        candidate.input( candidateList);
         candidateList.add(candidate);
         System.out.println("Candidate added successfully!");
     }

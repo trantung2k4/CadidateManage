@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.util.List;
 import utils.Validate;
 
 /**
@@ -45,8 +46,8 @@ public class Fresher extends Candidate {
     }
     
     @Override
-    public void input() {
-        super.input();
+    public void input(List<Candidate> candidateList) {
+        super.input(candidateList);
 
         // Nhập ngày tốt nghiệp
         this.graduationDate = Validate.inputString("Enter Graduation day: ", "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\\d{4})$");

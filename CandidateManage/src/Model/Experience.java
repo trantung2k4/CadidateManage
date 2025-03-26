@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.util.List;
 import utils.Validate;
 
 /**
@@ -44,9 +45,13 @@ public class Experience extends Candidate {
         this.professionalSkill = professionalSkill;
     }
 
+    /**
+     *
+     * @param candidateList
+     */
     @Override
-    public void input() {
-        super.input(); // Gọi input() của Candidate
+    public void input(List<Candidate> candidateList) {
+        super.input(candidateList); // Gọi input() của Candidate
 
         // Nhập số năm kinh nghiệm (tối thiểu 0, tối đa 50)
         this.yearExperience = Validate.inputInt("Enter Years of Experience: ", 0, 50);

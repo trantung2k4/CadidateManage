@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.util.List;
 import utils.Validate;
 
 /**
@@ -55,8 +56,8 @@ public class Internship extends Candidate {
     }
     
      @Override
-    public void input() {
-        super.input();
+    public void input(List<Candidate> candidateList) {
+        super.input(candidateList);
 
         // Nhập chuyên ngành
         this.major = Validate.inputString("Enter Major: ", ".+");

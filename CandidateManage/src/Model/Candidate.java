@@ -103,14 +103,18 @@ public class Candidate {
         this.typeCandidate = typeCandidate;
     }
 
-    public void input() {
+    public void input(List<Candidate> candidateList) {
         // Nhập ID
-        do {
+         while (true) {
             this.id = Validate.inputString("Enter Candidate ID: ", "^[a-zA-Z0-9]+$");
+            
+            // Nếu ID không tồn tại trong danh sách, thoát vòng lặp
             if (!Validate.checkIdExist(candidateList, this.id)) {
-                System.out.println("ID already exists! Please enter a different ID.");
+                break;
             }
-        } while (!Validate.checkIdExist(candidateList, this.id) && this.id.isEmpty());
+            
+            System.out.println("ID already exists or is empty! Please enter a different ID.");
+        }
 
         // Nhập Họ và Tên
         this.firstName = Validate.inputString("Enter First Name: ", "^[a-zA-Z ]+$");
